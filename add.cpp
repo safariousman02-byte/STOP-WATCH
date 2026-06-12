@@ -1,0 +1,29 @@
+Here’s a simple, complete, and runnable C++ example that takes two numbers from the user and outputs their sum.
+It includes input validation and error handling so it won’t crash on invalid input.
+Cpp#include <iostream>
+#include <limits> // For numeric_limits
+
+using namespace std;
+
+int main() {
+    double num1, num2;
+
+    cout << "Enter first number: ";
+    while (!(cin >> num1)) { // Validate input
+        cout << "Invalid input. Please enter a number: ";
+        cin.clear(); // Clear error flag
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+    }
+
+    cout << "Enter second number: ";
+    while (!(cin >> num2)) { // Validate input
+        cout << "Invalid input. Please enter a number: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
+    double sum = num1 + num2;
+    cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << endl;
+
+    return 0;
+}
