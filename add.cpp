@@ -1,6 +1,4 @@
-Here’s a simple, complete, and runnable C++ example that takes two numbers from the user and outputs their sum.
-It includes input validation and error handling so it won’t crash on invalid input.
-Cpp#include <iostream>
+#include <iostream>
 #include <limits> // For numeric_limits
 
 using namespace std;
